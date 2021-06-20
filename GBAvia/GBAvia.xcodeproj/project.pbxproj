@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803BF9BF267F81D20099301F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BC267F81D20099301F /* countries.json */; };
+		803BF9C0267F81D20099301F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BD267F81D20099301F /* airports.json */; };
+		803BF9C1267F81D20099301F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BE267F81D20099301F /* cities.json */; };
+		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
+		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
+		804045FB267F522C00676C61 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045FA267F522C00676C61 /* Airport.m */; };
+		80B904F1267F73E400ED2713 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B904F0267F73E400ED2713 /* DataManager.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
 		80F41121267BE4D000DF5645 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F41120267BE4D000DF5645 /* MainViewController.m */; };
@@ -16,6 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		803BF9BC267F81D20099301F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/countries.json"; sourceTree = "<group>"; };
+		803BF9BD267F81D20099301F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = airports.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/airports.json"; sourceTree = "<group>"; };
+		803BF9BE267F81D20099301F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/cities.json"; sourceTree = "<group>"; };
+		804045F0267F51D300676C61 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		804045F1267F51D300676C61 /* Country.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		804045F6267F521500676C61 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		804045F7267F521500676C61 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		804045F9267F522C00676C61 /* Airport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
+		804045FA267F522C00676C61 /* Airport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		80B904EF267F73E400ED2713 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		80B904F0267F73E400ED2713 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F41119267BE4D000DF5645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F4111A267BE4D000DF5645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +58,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		803BF9B8267F812F0099301F /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				803BF9BD267F81D20099301F /* airports.json */,
+				803BF9BE267F81D20099301F /* cities.json */,
+				803BF9BC267F81D20099301F /* countries.json */,
+			);
+			path = JSONs;
+			sourceTree = "<group>";
+		};
+		804045EF267F519F00676C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				804045F3267F51D900676C61 /* Country */,
+				804045F5267F51F000676C61 /* City */,
+				804045F4267F51E300676C61 /* Airport */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		804045F3267F51D900676C61 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				804045F0267F51D300676C61 /* Country.h */,
+				804045F1267F51D300676C61 /* Country.m */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		804045F4267F51E300676C61 /* Airport */ = {
+			isa = PBXGroup;
+			children = (
+				804045F9267F522C00676C61 /* Airport.h */,
+				804045FA267F522C00676C61 /* Airport.m */,
+			);
+			path = Airport;
+			sourceTree = "<group>";
+		};
+		804045F5267F51F000676C61 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				804045F6267F521500676C61 /* City.h */,
+				804045F7267F521500676C61 /* City.m */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		80B904EE267F73C900ED2713 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				80B904EF267F73E400ED2713 /* DataManager.h */,
+				80B904F0267F73E400ED2713 /* DataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		80F4110D267BE4D000DF5645 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +133,9 @@
 		80F41118267BE4D000DF5645 /* GBAvia */ = {
 			isa = PBXGroup;
 			children = (
+				803BF9B8267F812F0099301F /* JSONs */,
+				80B904EE267F73C900ED2713 /* DataManager */,
+				804045EF267F519F00676C61 /* Model */,
 				80F41119267BE4D000DF5645 /* AppDelegate.h */,
 				80F4111A267BE4D000DF5645 /* AppDelegate.m */,
 				80F4111C267BE4D000DF5645 /* SceneDelegate.h */,
@@ -129,6 +206,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803BF9BF267F81D20099301F /* countries.json in Resources */,
+				803BF9C1267F81D20099301F /* cities.json in Resources */,
+				803BF9C0267F81D20099301F /* airports.json in Resources */,
 				80F41129267BE4D300DF5645 /* LaunchScreen.storyboard in Resources */,
 				80F41126267BE4D300DF5645 /* Assets.xcassets in Resources */,
 			);
@@ -143,8 +223,12 @@
 			files = (
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
+				804045FB267F522C00676C61 /* Airport.m in Sources */,
+				804045F8267F521500676C61 /* City.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
+				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
 				80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */,
+				804045F2267F51D300676C61 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
