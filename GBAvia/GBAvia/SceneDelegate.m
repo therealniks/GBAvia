@@ -16,14 +16,16 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:windowFrame];
     [self.window makeKeyAndVisible];
+    
     MainViewController *mainViewController = [MainViewController new];
-    self.window.rootViewController = mainViewController;
-    UIWindowScene *uiWindowScene = (UIWindowScene *)scene;
-    [self.window setWindowScene:uiWindowScene];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    self.window.rootViewController = navigationController;
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    [self.window setWindowScene:windowScene];
 }
 
 

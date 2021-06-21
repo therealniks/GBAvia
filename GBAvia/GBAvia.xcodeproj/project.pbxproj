@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */; };
 		803BF9BF267F81D20099301F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BC267F81D20099301F /* countries.json */; };
 		803BF9C0267F81D20099301F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BD267F81D20099301F /* airports.json */; };
 		803BF9C1267F81D20099301F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 803BF9BE267F81D20099301F /* cities.json */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8012CF792680ABED00A27BB6 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		803BF9BC267F81D20099301F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = countries.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/countries.json"; sourceTree = "<group>"; };
 		803BF9BD267F81D20099301F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = airports.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/airports.json"; sourceTree = "<group>"; };
 		803BF9BE267F81D20099301F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cities.json; path = "../../../../../../Downloads/Aviogb-main/Aviogb/Aviogb/JSONs/cities.json"; sourceTree = "<group>"; };
@@ -58,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8012CF782680ABBB00A27BB6 /* PlaceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8012CF792680ABED00A27BB6 /* PlaceViewController.h */,
+				8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */,
+			);
+			path = PlaceViewController;
+			sourceTree = "<group>";
+		};
 		803BF9B8267F812F0099301F /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		80F41118267BE4D000DF5645 /* GBAvia */ = {
 			isa = PBXGroup;
 			children = (
+				8012CF782680ABBB00A27BB6 /* PlaceViewController */,
 				803BF9B8267F812F0099301F /* JSONs */,
 				80B904EE267F73C900ED2713 /* DataManager */,
 				804045EF267F519F00676C61 /* Model */,
@@ -221,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */,
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
 				804045FB267F522C00676C61 /* Airport.m in Sources */,
