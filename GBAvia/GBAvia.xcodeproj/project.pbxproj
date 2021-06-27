@@ -21,6 +21,7 @@
 		80F41126267BE4D300DF5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F41125267BE4D300DF5645 /* Assets.xcassets */; };
 		80F41129267BE4D300DF5645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F41127267BE4D300DF5645 /* LaunchScreen.storyboard */; };
 		80F4112C267BE4D300DF5645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4112B267BE4D300DF5645 /* main.m */; };
+		80F860832688ED3D004C9A3A /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F860822688ED3D004C9A3A /* APIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		80F41128267BE4D300DF5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80F4112A267BE4D300DF5645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F4112B267BE4D300DF5645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80F860812688ED3D004C9A3A /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		80F860822688ED3D004C9A3A /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,7 @@
 		80F41118267BE4D000DF5645 /* GBAvia */ = {
 			isa = PBXGroup;
 			children = (
+				80F860802688ED27004C9A3A /* Service */,
 				8012CF782680ABBB00A27BB6 /* PlaceViewController */,
 				803BF9B8267F812F0099301F /* JSONs */,
 				80B904EE267F73C900ED2713 /* DataManager */,
@@ -161,6 +165,15 @@
 				80F4112B267BE4D300DF5645 /* main.m */,
 			);
 			path = GBAvia;
+			sourceTree = "<group>";
+		};
+		80F860802688ED27004C9A3A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				80F860812688ED3D004C9A3A /* APIManager.h */,
+				80F860822688ED3D004C9A3A /* APIManager.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +251,7 @@
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
 				804045FB267F522C00676C61 /* Airport.m in Sources */,
+				80F860832688ED3D004C9A3A /* APIManager.m in Sources */,
 				804045F8267F521500676C61 /* City.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
