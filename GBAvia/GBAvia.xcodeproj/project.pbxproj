@@ -86,6 +86,7 @@
 		804045EF267F519F00676C61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				80677F9C268A242E00317DF3 /* Ticket */,
 				804045F3267F51D900676C61 /* Country */,
 				804045F5267F51F000676C61 /* City */,
 				804045F4267F51E300676C61 /* Airport */,
@@ -118,6 +119,13 @@
 				804045F7267F521500676C61 /* City.m */,
 			);
 			path = City;
+			sourceTree = "<group>";
+		};
+		80677F9C268A242E00317DF3 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ticket;
 			sourceTree = "<group>";
 		};
 		80B904EE267F73C900ED2713 /* DataManager */ = {
