@@ -14,6 +14,7 @@
 		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
 		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
 		804045FB267F522C00676C61 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045FA267F522C00676C61 /* Airport.m */; };
+		80677F9F268A247C00317DF3 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 80677F9E268A247C00317DF3 /* Ticket.m */; };
 		80B904F1267F73E400ED2713 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B904F0267F73E400ED2713 /* DataManager.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
@@ -36,6 +37,8 @@
 		804045F7267F521500676C61 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		804045F9267F522C00676C61 /* Airport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
 		804045FA267F522C00676C61 /* Airport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		80677F9D268A247C00317DF3 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		80677F9E268A247C00317DF3 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		80B904EF267F73E400ED2713 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		80B904F0267F73E400ED2713 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +127,8 @@
 		80677F9C268A242E00317DF3 /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
+				80677F9D268A247C00317DF3 /* Ticket.h */,
+				80677F9E268A247C00317DF3 /* Ticket.m */,
 			);
 			path = Ticket;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				804045F8267F521500676C61 /* City.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
+				80677F9F268A247C00317DF3 /* Ticket.m in Sources */,
 				80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */,
 				804045F2267F51D300676C61 /* Country.m in Sources */,
 			);
