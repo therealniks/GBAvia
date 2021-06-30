@@ -96,8 +96,7 @@ NSString * SearchRequestQuery(SearchRequest request) {
     return result;
 }
 
-- (void)mapPricesFor:(City *)origin withCompletion:(void (^)(NSArray *prices))completion
-{
+- (void)mapPricesFor:(City *)origin withCompletion:(void (^)(NSArray *prices))completion {
     static BOOL isLoading;
     if (isLoading) { return; }
     isLoading = YES;
