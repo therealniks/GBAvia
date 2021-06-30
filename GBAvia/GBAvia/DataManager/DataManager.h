@@ -33,10 +33,11 @@ typedef struct SearchRequest {
 @property(nonatomic, strong, readonly) NSArray *cities;
 @property(nonatomic, strong, readonly) NSArray *airports;
 
-+(instancetype) sharedInstance;
++ (instancetype) sharedInstance;
 
--(void) loadData;
--(City *)cityForIATA:(NSString *)iata;
+- (void) loadData;
+- (City *)cityForIATA:(NSString *)iata;
+- (City *)cityForLocation:(CLLocation *)location;
 
 @end
 
