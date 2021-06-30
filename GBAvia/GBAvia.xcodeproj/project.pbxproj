@@ -14,6 +14,9 @@
 		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
 		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
 		804045FB267F522C00676C61 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045FA267F522C00676C61 /* Airport.m */; };
+		80677F9F268A247C00317DF3 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 80677F9E268A247C00317DF3 /* Ticket.m */; };
+		80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */; };
+		80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */; };
 		80B904F1267F73E400ED2713 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B904F0267F73E400ED2713 /* DataManager.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
@@ -21,6 +24,7 @@
 		80F41126267BE4D300DF5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F41125267BE4D300DF5645 /* Assets.xcassets */; };
 		80F41129267BE4D300DF5645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F41127267BE4D300DF5645 /* LaunchScreen.storyboard */; };
 		80F4112C267BE4D300DF5645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4112B267BE4D300DF5645 /* main.m */; };
+		80F860832688ED3D004C9A3A /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F860822688ED3D004C9A3A /* APIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,12 @@
 		804045F7267F521500676C61 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		804045F9267F522C00676C61 /* Airport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
 		804045FA267F522C00676C61 /* Airport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		80677F9D268A247C00317DF3 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		80677F9E268A247C00317DF3 /* Ticket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		80ADFAE0268A323E00161F58 /* TicketsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketsTableViewController.h; sourceTree = "<group>"; };
+		80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketsTableViewController.m; sourceTree = "<group>"; };
+		80ADFAE4268A325C00161F58 /* TicketTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTableViewCell.h; sourceTree = "<group>"; };
+		80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketTableViewCell.m; sourceTree = "<group>"; };
 		80B904EF267F73E400ED2713 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		80B904F0267F73E400ED2713 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +58,8 @@
 		80F41128267BE4D300DF5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80F4112A267BE4D300DF5645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F4112B267BE4D300DF5645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80F860812688ED3D004C9A3A /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		80F860822688ED3D004C9A3A /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 		804045EF267F519F00676C61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				80677F9C268A242E00317DF3 /* Ticket */,
 				804045F3267F51D900676C61 /* Country */,
 				804045F5267F51F000676C61 /* City */,
 				804045F4267F51E300676C61 /* Airport */,
@@ -117,6 +130,53 @@
 			path = City;
 			sourceTree = "<group>";
 		};
+		80677F9C268A242E00317DF3 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				80677F9D268A247C00317DF3 /* Ticket.h */,
+				80677F9E268A247C00317DF3 /* Ticket.m */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
+		80ADFADF268A321600161F58 /* TicketsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80ADFAE3268A324200161F58 /* Cell */,
+				80ADFAE0268A323E00161F58 /* TicketsTableViewController.h */,
+				80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */,
+			);
+			path = TicketsViewController;
+			sourceTree = "<group>";
+		};
+		80ADFAE3268A324200161F58 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				80ADFAE4268A325C00161F58 /* TicketTableViewCell.h */,
+				80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		80ADFAE7268A3A6200161F58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80ADFAE8268A3A7500161F58 /* MainViewController */,
+				80ADFADF268A321600161F58 /* TicketsViewController */,
+				8012CF782680ABBB00A27BB6 /* PlaceViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80ADFAE8268A3A7500161F58 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80F4111F267BE4D000DF5645 /* MainViewController.h */,
+				80F41120267BE4D000DF5645 /* MainViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		80B904EE267F73C900ED2713 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +205,8 @@
 		80F41118267BE4D000DF5645 /* GBAvia */ = {
 			isa = PBXGroup;
 			children = (
-				8012CF782680ABBB00A27BB6 /* PlaceViewController */,
+				80ADFAE7268A3A6200161F58 /* View */,
+				80F860802688ED27004C9A3A /* Service */,
 				803BF9B8267F812F0099301F /* JSONs */,
 				80B904EE267F73C900ED2713 /* DataManager */,
 				804045EF267F519F00676C61 /* Model */,
@@ -153,14 +214,21 @@
 				80F4111A267BE4D000DF5645 /* AppDelegate.m */,
 				80F4111C267BE4D000DF5645 /* SceneDelegate.h */,
 				80F4111D267BE4D000DF5645 /* SceneDelegate.m */,
-				80F4111F267BE4D000DF5645 /* MainViewController.h */,
-				80F41120267BE4D000DF5645 /* MainViewController.m */,
 				80F41125267BE4D300DF5645 /* Assets.xcassets */,
 				80F41127267BE4D300DF5645 /* LaunchScreen.storyboard */,
 				80F4112A267BE4D300DF5645 /* Info.plist */,
 				80F4112B267BE4D300DF5645 /* main.m */,
 			);
 			path = GBAvia;
+			sourceTree = "<group>";
+		};
+		80F860802688ED27004C9A3A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				80F860812688ED3D004C9A3A /* APIManager.h */,
+				80F860822688ED3D004C9A3A /* APIManager.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,14 +302,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */,
 				8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */,
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
 				804045FB267F522C00676C61 /* Airport.m in Sources */,
+				80F860832688ED3D004C9A3A /* APIManager.m in Sources */,
 				804045F8267F521500676C61 /* City.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
+				80677F9F268A247C00317DF3 /* Ticket.m in Sources */,
 				80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */,
+				80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */,
 				804045F2267F51D300676C61 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,13 +16,13 @@ typedef enum PlaceType {
 
 @protocol PlaceViewControllerDelegate <NSObject>
 
--(void)selectPlace:(id)place withType:(PlaceType)placeType andDataType:(DataSourceType)dataType;
+- (void)selectPlace:(id)place withType:(PlaceType)placeType andDataType:(DataSourceType)dataType;
 
 @end
 
 @interface PlaceViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) id<PlaceViewControllerDelegate>delegate;
--(instancetype)initWithType:(PlaceType)type;
+- (instancetype)initWithType:(PlaceType)type;
 
 @end
