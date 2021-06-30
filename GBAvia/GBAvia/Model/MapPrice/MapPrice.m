@@ -12,7 +12,7 @@
 - (instancetype) initWithDictionary:(NSDictionary *)dictionary withOrigin:(City *)origin {
     self = [super init];
     if (self) {
-    _destination = [[DataManager sharedInstance] cityForIATA: [dictionary valueForKey:@"destionation"]];
+    _destination = [[DataManager sharedInstance] cityForIATA: [dictionary valueForKey:@"destination"]];
     _origin = origin;
     _departure = [self dateFromString: [dictionary valueForKey:@"depart_date"]];
     _returnDate = [self dateFromString: [dictionary valueForKey:@"return_date"]];

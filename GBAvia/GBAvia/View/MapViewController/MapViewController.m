@@ -16,11 +16,20 @@
 @interface MapViewController () <MKMapViewDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (nonatomic, strong) LocationService *locationService;
+@property (nonatomic, strong) CLLocation *currentLocation;
 @property (nonatomic, strong) City *origin;
 @property (nonatomic, strong) NSArray *prices;
 @end
 
 @implementation MapViewController
+
+- (instancetype)initWithLocation:(CLLocation *)location {
+    self = [super init];
+    if (self) {
+        _currentLocation = location;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

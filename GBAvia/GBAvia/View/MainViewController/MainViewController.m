@@ -87,10 +87,19 @@
 }
 
 - (void)dataLoadedSuccessfully {
-    [[APIManager sharedInstance] cityForCurrentIP:^(City *city) {
-        [self setPlace:city withDataType:DataSourceTypeCity andPlaceType:PlaceTypeDeparture forButton:_departureButton];
-        }];
+    _locationService = [[LocationService alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCurrentLocation:) name:kLocationServiceDidUpdateCurrentLocation object:nil];
     }
+
+- (void)updateCurrentLocation:(NSNotification *)notification {
+    _currentLocation = notification.object;
+    if (_currentLocation) {
+        City *city = [[DataManager sharedInstance] cityForLocation:_currentLocation];
+        if (city) {
+            [self selectPlace:city withType:PlaceTypeDeparture andDataType:DataSourceTypeCity];
+        }
+    }
+}
 
 - (void)placeButtonDidTap:(UIButton *)sender {
     PlaceViewController *placeViewController;
@@ -120,7 +129,7 @@
 }
 
 - (void)mapPriceDidTap: (UIButton *) sender {
-    MapViewController *mapViewController = [MapViewController new];
+    MapViewController *mapViewController = [[MapViewController alloc] initWithLocation:_currentLocation];
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
