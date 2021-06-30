@@ -18,6 +18,7 @@
 		80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */; };
 		80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */; };
 		80B904F1267F73E400ED2713 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B904F0267F73E400ED2713 /* DataManager.m */; };
+		80D3C544268CBA7A0063490C /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C543268CBA7A0063490C /* LocationService.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
 		80F41121267BE4D000DF5645 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F41120267BE4D000DF5645 /* MainViewController.m */; };
@@ -47,6 +48,8 @@
 		80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketTableViewCell.m; sourceTree = "<group>"; };
 		80B904EF267F73E400ED2713 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		80B904F0267F73E400ED2713 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		80D3C542268CBA7A0063490C /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		80D3C543268CBA7A0063490C /* LocationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F41119267BE4D000DF5645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F4111A267BE4D000DF5645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 			children = (
 				80F860812688ED3D004C9A3A /* APIManager.h */,
 				80F860822688ED3D004C9A3A /* APIManager.m */,
+				80D3C542268CBA7A0063490C /* LocationService.h */,
+				80D3C543268CBA7A0063490C /* LocationService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				80677F9F268A247C00317DF3 /* Ticket.m in Sources */,
 				80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */,
 				80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */,
+				80D3C544268CBA7A0063490C /* LocationService.m in Sources */,
 				804045F2267F51D300676C61 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
