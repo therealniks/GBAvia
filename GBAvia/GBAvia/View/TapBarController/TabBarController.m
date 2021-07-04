@@ -15,26 +15,29 @@
 
 @implementation TabBarController
 
-- (instancetype) init {
+- (instancetype)init
+{
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.viewControllers = [self createViewControllers];
-        self.tabBar.tintColor = UIColor.blackColor;
+        self.tabBar.tintColor = [UIColor blackColor];
     }
     return self;
 }
 
-- (NSArray<UIViewController*> *) createViewControllers {
+
+- (NSArray<UIViewController*> *)createViewControllers {
     NSMutableArray<UIViewController*> *controllers = [NSMutableArray new];
+    
     MainViewController *mainViewController = [[MainViewController alloc] init];
-    mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Search" image:@"search" selectedImage:@"search_selected"];
+    mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Search" image:[UIImage systemImageNamed:@"magnifyingglass.circle"] selectedImage:[UIImage systemImageNamed:@"magnifyingglass.circle.fill"]];
     UINavigationController *mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     [controllers addObject:mainNavigationController];
     
     MapViewController *mapViewController = [[MapViewController alloc] init];
-    mapViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Map" image:@"map" selectedImage:@"map_selected"];
+    mapViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Price map" image:[UIImage systemImageNamed:@"map"] selectedImage:[UIImage systemImageNamed:@"map.fill"]];
     UINavigationController *mapNavigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
-    [controllers addObject: mapNavigationController];
+    [controllers addObject:mapNavigationController];
     
     return controllers;
 }

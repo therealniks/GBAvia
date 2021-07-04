@@ -17,15 +17,20 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:windowFrame];
     [self.window makeKeyAndVisible];
     
+
+    //MainViewController *firstController = [[MainViewController alloc] init];
+    
     TabBarController *tabBarController = [TabBarController new];
     
     self.window.rootViewController = tabBarController;
+   // firstController.view.backgroundColor = [UIColor greenColor];
     
-    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    UIWindowScene *windowScene = (UIWindowScene*)scene;
     [self.window setWindowScene:windowScene];
 }
 
