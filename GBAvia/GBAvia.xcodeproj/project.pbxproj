@@ -14,6 +14,7 @@
 		80677F9F268A247C00317DF3 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 80677F9E268A247C00317DF3 /* Ticket.m */; };
 		80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */; };
 		80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */; };
+		80B8949626920C9200269DB3 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B8949526920C9200269DB3 /* TabBarController.m */; };
 		80B904F1267F73E400ED2713 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B904F0267F73E400ED2713 /* DataManager.m */; };
 		80D3C544268CBA7A0063490C /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C543268CBA7A0063490C /* LocationService.m */; };
 		80D3C548268CD1530063490C /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C547268CD1530063490C /* MapPrice.m */; };
@@ -45,6 +46,8 @@
 		80ADFAE1268A323E00161F58 /* TicketsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketsTableViewController.m; sourceTree = "<group>"; };
 		80ADFAE4268A325C00161F58 /* TicketTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketTableViewCell.h; sourceTree = "<group>"; };
 		80ADFAE5268A325C00161F58 /* TicketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketTableViewCell.m; sourceTree = "<group>"; };
+		80B8949426920C9200269DB3 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		80B8949526920C9200269DB3 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		80B904EF267F73E400ED2713 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		80B904F0267F73E400ED2713 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		80D3C542268CBA7A0063490C /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 		80ADFAE7268A3A6200161F58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				80B8949326920C2900269DB3 /* TapBarController */,
 				80D3C54F268CD8F40063490C /* MapViewController */,
 				80ADFAE8268A3A7500161F58 /* MainViewController */,
 				80ADFADF268A321600161F58 /* TicketsViewController */,
@@ -186,6 +190,15 @@
 				80F41120267BE4D000DF5645 /* MainViewController.m */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		80B8949326920C2900269DB3 /* TapBarController */ = {
+			isa = PBXGroup;
+			children = (
+				80B8949426920C9200269DB3 /* TabBarController.h */,
+				80B8949526920C9200269DB3 /* TabBarController.m */,
+			);
+			path = TapBarController;
 			sourceTree = "<group>";
 		};
 		80B904EE267F73C900ED2713 /* DataManager */ = {
@@ -347,6 +360,7 @@
 				80D3C552268CD9730063490C /* MapViewController.m in Sources */,
 				80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */,
 				80ADFAE2268A323E00161F58 /* TicketsTableViewController.m in Sources */,
+				80B8949626920C9200269DB3 /* TabBarController.m in Sources */,
 				80D3C544268CBA7A0063490C /* LocationService.m in Sources */,
 				804045F2267F51D300676C61 /* Country.m in Sources */,
 			);
