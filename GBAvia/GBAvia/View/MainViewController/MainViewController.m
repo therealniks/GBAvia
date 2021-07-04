@@ -10,13 +10,18 @@
 #import "PlaceViewController.h"
 #import "APIManager.h"
 #import "TicketsTableViewController.h"
+#import "MapViewController.h"
+#import "LocationService.h"
 
 @interface MainViewController () <PlaceViewControllerDelegate>
 @property (nonatomic, strong) UIView *placeContainerView;
 @property (nonatomic, strong) UIButton *departureButton;
 @property (nonatomic, strong) UIButton *arrivalButton;
 @property (nonatomic, strong) UIButton *searchButton;
+@property (nonatomic, strong) UIButton *mapPriceButton;
 @property (nonatomic) SearchRequest searchRequest;
+@property (nonatomic, strong) LocationService *locationService;
+@property (nonatomic, strong) CLLocation *currentLocation;
 @end
 
 @implementation MainViewController
@@ -64,16 +69,37 @@
     _searchButton.layer.cornerRadius = 8;
     _searchButton.titleLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightBold];
     [_searchButton addTarget:self action:@selector(searchButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataLoadedSuccessfully) name:kDataManagerLoadDataDidComplete object:nil];
     [self.view addSubview:_searchButton];
+    
+    _mapPriceButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_mapPriceButton setTitle:@"Map price" forState:UIControlStateNormal];
+    _mapPriceButton.tintColor = [UIColor whiteColor];
+    _mapPriceButton.frame = CGRectMake(30, CGRectGetMaxX(_placeContainerView.frame) + 100,
+                                     [UIScreen mainScreen].bounds.size.width - 60, 60);
+    _mapPriceButton.backgroundColor = [UIColor systemBlueColor];
+    _mapPriceButton.layer.cornerRadius = 8;
+    _mapPriceButton.titleLabel.font = [UIFont systemFontOfSize:20 weight:UIFontWeightBold];
+    [_mapPriceButton addTarget:self action:@selector(mapPriceDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataLoadedSuccessfully) name:kDataManagerLoadDataDidComplete object:nil];
+    [self.view addSubview:_mapPriceButton];
+    
+    
 }
 
 - (void)dataLoadedSuccessfully {
-    [[APIManager sharedInstance] cityForCurrentIP:^(City *city) {
-        [self setPlace:city withDataType:DataSourceTypeCity andPlaceType:PlaceTypeDeparture forButton:_departureButton];
-        }];
-        
+    _locationService = [[LocationService alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCurrentLocation:) name:kLocationServiceDidUpdateCurrentLocation object:nil];
     }
+
+- (void)updateCurrentLocation:(NSNotification *)notification {
+    _currentLocation = notification.object;
+    if (_currentLocation) {
+        City *city = [[DataManager sharedInstance] cityForLocation:_currentLocation];
+        if (city) {
+            [self selectPlace:city withType:PlaceTypeDeparture andDataType:DataSourceTypeCity];
+        }
+    }
+}
 
 - (void)placeButtonDidTap:(UIButton *)sender {
     PlaceViewController *placeViewController;
@@ -101,6 +127,12 @@
         }
     }];
 }
+
+- (void)mapPriceDidTap: (UIButton *) sender {
+    MapViewController *mapViewController = [[MapViewController alloc] initWithLocation:_currentLocation];
+    [self.navigationController pushViewController:mapViewController animated:YES];
+}
+
 
 //MARK:- Delegate
 
@@ -133,13 +165,12 @@
     [button setTitle:title forState:UIControlStateNormal];
 }
 
-- (void) loadDidComplete {
-  
-}
 
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+
 
 
 
