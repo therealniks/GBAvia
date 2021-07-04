@@ -171,7 +171,7 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		80ADFAE7268A3A6200161F58 /* View */ = {
+		80ADFAE7268A3A6200161F58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				80B8949326920C2900269DB3 /* TapBarController */,
@@ -180,7 +180,7 @@
 				80ADFADF268A321600161F58 /* TicketsViewController */,
 				8012CF782680ABBB00A27BB6 /* PlaceViewController */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		80ADFAE8268A3A7500161F58 /* MainViewController */ = {
@@ -247,7 +247,7 @@
 		80F41118267BE4D000DF5645 /* GBAvia */ = {
 			isa = PBXGroup;
 			children = (
-				80ADFAE7268A3A6200161F58 /* View */,
+				80ADFAE7268A3A6200161F58 /* Controllers */,
 				80F860802688ED27004C9A3A /* Service */,
 				803BF9B8267F812F0099301F /* JSONs */,
 				80B904EE267F73C900ED2713 /* DataManager */,
