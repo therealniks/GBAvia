@@ -62,13 +62,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TicketCellReuseIdentifier forIndexPath:indexPath];
     if (isFavourite) {
-    cell.favouriteTicket = [_tickets objectAtIndex:indexPath.row];
-    } else {
-    cell.ticket = [_tickets objectAtIndex:indexPath.row];
-    }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+            cell.favouriteTicket = [_tickets objectAtIndex:indexPath.row];
+        } else {
+            cell.ticket = [_tickets objectAtIndex:indexPath.row];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 140.0;

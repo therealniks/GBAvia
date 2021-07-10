@@ -82,7 +82,7 @@
     [downloadLogoTask resume];
 }
 
-- (void)setFavoriteTicket:(FavouriteTicket *)favouriteTicket {
+- (void)setFavouriteTicket:(FavouriteTicket *)favouriteTicket {
     _favouriteTicket = favouriteTicket;
     _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favouriteTicket.price];
     _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favouriteTicket.from, favouriteTicket.to];
@@ -90,6 +90,7 @@
     dateFormatter.dateFormat = @"dd MMMM yyyy hh:mm";
     _dateLabel.text = [dateFormatter stringFromDate:favouriteTicket.departure];
     NSURL *urlLogo = AirlineLogo(favouriteTicket.airline);
+    
     NSURLSessionDownloadTask *downloadLogoTask = [[NSURLSession sharedSession] downloadTaskWithURL:urlLogo completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         UIImage  *downloadedImage = [UIImage imageWithData:
             [NSData dataWithContentsOfURL:location]];

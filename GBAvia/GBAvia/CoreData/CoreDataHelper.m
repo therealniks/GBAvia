@@ -27,7 +27,7 @@
 }
 
 - (void) setup {
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momb"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL: modelURL];
     NSURL *docsURL = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL *storeURL = [docsURL URLByAppendingPathComponent:@"Model.sqlite"];
