@@ -82,7 +82,7 @@
     [downloadLogoTask resume];
 }
 
-- (void)setFavoriteTicket:(FavouriteTicket *)favouriteTicket {
+- (void)setFavouriteTicket:(FavouriteTicket *)favouriteTicket {
     _favouriteTicket = favouriteTicket;
     _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favouriteTicket.price];
     _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favouriteTicket.from, favouriteTicket.to];
