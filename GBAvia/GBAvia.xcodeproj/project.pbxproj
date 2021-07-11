@@ -27,6 +27,7 @@
 		80D3C54D268CD62B0063490C /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D3C54A268CD62B0063490C /* countries.json */; };
 		80D3C54E268CD62B0063490C /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D3C54B268CD62B0063490C /* airports.json */; };
 		80D3C552268CD9730063490C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C551268CD9730063490C /* MapViewController.m */; };
+		80F14A4D269B1EC400642EEE /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A4C269B1EC400642EEE /* ContentViewController.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
 		80F41121267BE4D000DF5645 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F41120267BE4D000DF5645 /* MainViewController.m */; };
@@ -73,6 +74,8 @@
 		80D3C54B268CD62B0063490C /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		80D3C550268CD9730063490C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		80D3C551268CD9730063490C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		80F14A4B269B1EC400642EEE /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		80F14A4C269B1EC400642EEE /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F41119267BE4D000DF5645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F4111A267BE4D000DF5645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 		80ADFAE7268A3A6200161F58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				80F14A4E269B1FE100642EEE /* New Group */,
+				80F14A4A269B1E9400642EEE /* ContentViewController */,
 				8006B7EA269A0555001B7657 /* ProgressView */,
 				80B8949326920C2900269DB3 /* TapBarController */,
 				80D3C54F268CD8F40063490C /* MapViewController */,
@@ -272,6 +277,22 @@
 				80D3C551268CD9730063490C /* MapViewController.m */,
 			);
 			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		80F14A4A269B1E9400642EEE /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80F14A4B269B1EC400642EEE /* ContentViewController.h */,
+				80F14A4C269B1EC400642EEE /* ContentViewController.m */,
+			);
+			path = ContentViewController;
+			sourceTree = "<group>";
+		};
+		80F14A4E269B1FE100642EEE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		80F4110D267BE4D000DF5645 = {
@@ -397,6 +418,7 @@
 				80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */,
 				8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */,
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
+				80F14A4D269B1EC400642EEE /* ContentViewController.m in Sources */,
 				80AF33F72697390B00C02AE8 /* FavouriteTicket+CoreDataClass.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
 				804045FB267F522C00676C61 /* Airport.m in Sources */,

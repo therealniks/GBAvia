@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProgressView : UIView
-+ (instancetype)sharedInstance;
++ (instancetype) sharedInstance;
 - (void)show:(void (^)(void))completion;
 - (void)dismiss:(void (^)(void))completion;
 @end
