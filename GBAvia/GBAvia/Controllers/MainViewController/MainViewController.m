@@ -13,6 +13,7 @@
 #import "MapViewController.h"
 #import "LocationService.h"
 #import "ProgressView.h"
+#import "FirstViewController.h"
 
 @interface MainViewController () <PlaceViewControllerDelegate>
 @property (nonatomic, strong) UIView *placeContainerView;
@@ -35,7 +36,7 @@
     self.navigationController.navigationBar.prefersLargeTitles = YES;
     self.title = @"Search";
     
-    _placeContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 140, [UIScreen mainScreen].bounds.size.width, 170)];
+    _placeContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 180, [UIScreen mainScreen].bounds.size.width, 170)];
     _placeContainerView.layer.shadowColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
     _placeContainerView.layer.shadowOffset = CGSizeZero;
     _placeContainerView.layer.shadowRadius = 20;
@@ -46,7 +47,7 @@
     _departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_departureButton setTitle:@"From" forState: UIControlStateNormal];
     _departureButton.tintColor = [UIColor blackColor];
-    _departureButton.frame = CGRectMake(30.0, 140.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _departureButton.frame = CGRectMake(30.0, 180.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
     _departureButton.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
     _departureButton.layer.cornerRadius = 4;
     [_departureButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
@@ -84,8 +85,20 @@
 //    [_mapPriceButton addTarget:self action:@selector(mapPriceDidTap:) forControlEvents:UIControlEventTouchUpInside];
 
 //    [self.view addSubview:_mapPriceButton];
-    
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self presentFirstViewControllerIfNeeded];
+}
+- (void)presentFirstViewControllerIfNeeded {
+    BOOL isFirstStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"first_start"];
+    if (!isFirstStart) {
+        FirstViewController *firstViewController = [[FirstViewController alloc]
+        initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+        navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        [self presentViewController:firstViewController animated:YES completion:nil];
+    }
 }
 
 - (void)dataLoadedSuccessfully {
