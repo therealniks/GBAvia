@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8006B7ED269A0588001B7657 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8006B7EC269A0588001B7657 /* ProgressView.m */; };
 		8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */; };
 		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
 		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8006B7EB269A0588001B7657 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		8006B7EC269A0588001B7657 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		8012CF792680ABED00A27BB6 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		804045F0267F51D300676C61 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
@@ -96,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8006B7EA269A0555001B7657 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				8006B7EB269A0588001B7657 /* ProgressView.h */,
+				8006B7EC269A0588001B7657 /* ProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		8012CF782680ABBB00A27BB6 /* PlaceViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +197,7 @@
 		80ADFAE7268A3A6200161F58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8006B7EA269A0555001B7657 /* ProgressView */,
 				80B8949326920C2900269DB3 /* TapBarController */,
 				80D3C54F268CD8F40063490C /* MapViewController */,
 				80ADFAE8268A3A7500161F58 /* MainViewController */,
@@ -390,6 +403,7 @@
 				80F860832688ED3D004C9A3A /* APIManager.m in Sources */,
 				80AF33EF26971A6700C02AE8 /* CoreDataHelper.m in Sources */,
 				804045F8267F521500676C61 /* City.m in Sources */,
+				8006B7ED269A0588001B7657 /* ProgressView.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
 				80D3C548268CD1530063490C /* MapPrice.m in Sources */,
