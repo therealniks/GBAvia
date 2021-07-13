@@ -29,6 +29,7 @@
 		80D3C552268CD9730063490C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C551268CD9730063490C /* MapViewController.m */; };
 		80F14A4D269B1EC400642EEE /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A4C269B1EC400642EEE /* ContentViewController.m */; };
 		80F14A51269B203800642EEE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A50269B203800642EEE /* FirstViewController.m */; };
+		80F14A55269B461800642EEE /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A54269B461800642EEE /* NotificationCenter.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
 		80F41121267BE4D000DF5645 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F41120267BE4D000DF5645 /* MainViewController.m */; };
@@ -79,6 +80,8 @@
 		80F14A4C269B1EC400642EEE /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		80F14A4F269B203800642EEE /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		80F14A50269B203800642EEE /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		80F14A53269B461800642EEE /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
+		80F14A54269B461800642EEE /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F41119267BE4D000DF5645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F4111A267BE4D000DF5645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -300,6 +303,15 @@
 			path = FirstViewController;
 			sourceTree = "<group>";
 		};
+		80F14A52269B45E400642EEE /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				80F14A53269B461800642EEE /* NotificationCenter.h */,
+				80F14A54269B461800642EEE /* NotificationCenter.m */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
 		80F4110D267BE4D000DF5645 = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +352,7 @@
 		80F860802688ED27004C9A3A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				80F14A52269B45E400642EEE /* NotificationCenter */,
 				80F860812688ED3D004C9A3A /* APIManager.h */,
 				80F860822688ED3D004C9A3A /* APIManager.m */,
 				80D3C542268CBA7A0063490C /* LocationService.h */,
@@ -431,6 +444,7 @@
 				80F860832688ED3D004C9A3A /* APIManager.m in Sources */,
 				80AF33EF26971A6700C02AE8 /* CoreDataHelper.m in Sources */,
 				804045F8267F521500676C61 /* City.m in Sources */,
+				80F14A55269B461800642EEE /* NotificationCenter.m in Sources */,
 				8006B7ED269A0588001B7657 /* ProgressView.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
