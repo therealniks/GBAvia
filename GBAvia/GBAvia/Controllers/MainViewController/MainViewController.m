@@ -12,6 +12,8 @@
 #import "TicketsTableViewController.h"
 #import "MapViewController.h"
 #import "LocationService.h"
+#import "ProgressView.h"
+#import "FirstViewController.h"
 
 @interface MainViewController () <PlaceViewControllerDelegate>
 @property (nonatomic, strong) UIView *placeContainerView;
@@ -34,7 +36,7 @@
     self.navigationController.navigationBar.prefersLargeTitles = YES;
     self.title = @"Search";
     
-    _placeContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 140, [UIScreen mainScreen].bounds.size.width, 170)];
+    _placeContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 180, [UIScreen mainScreen].bounds.size.width, 170)];
     _placeContainerView.layer.shadowColor = [[[UIColor blackColor] colorWithAlphaComponent:0.1] CGColor];
     _placeContainerView.layer.shadowOffset = CGSizeZero;
     _placeContainerView.layer.shadowRadius = 20;
@@ -45,7 +47,7 @@
     _departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_departureButton setTitle:@"From" forState: UIControlStateNormal];
     _departureButton.tintColor = [UIColor blackColor];
-    _departureButton.frame = CGRectMake(30.0, 140.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _departureButton.frame = CGRectMake(30.0, 180.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
     _departureButton.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.3];
     _departureButton.layer.cornerRadius = 4;
     [_departureButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
@@ -83,8 +85,20 @@
 //    [_mapPriceButton addTarget:self action:@selector(mapPriceDidTap:) forControlEvents:UIControlEventTouchUpInside];
 
 //    [self.view addSubview:_mapPriceButton];
-    
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self presentFirstViewControllerIfNeeded];
+}
+- (void)presentFirstViewControllerIfNeeded {
+    BOOL isFirstStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"first_start"];
+    if (!isFirstStart) {
+        FirstViewController *firstViewController = [[FirstViewController alloc]
+        initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+        navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        [self presentViewController:firstViewController animated:YES completion:nil];
+    }
 }
 
 - (void)dataLoadedSuccessfully {
@@ -114,19 +128,31 @@
 }
 
 - (void)searchButtonDidTap:(UIButton *)sender {
-    [[APIManager sharedInstance] ticketsWithRequest:_searchRequest withCompletion:^(NSArray *tickets)
-    {
-    if (tickets.count > 0) {
-        TicketsTableViewController *ticketsTableViewController = [[TicketsTableViewController alloc] initWithTickets:tickets];
-        [self.navigationController pushViewController:ticketsTableViewController animated:self];
+    if (_searchRequest.origin && _searchRequest.destination) {
+        [[ProgressView sharedInstance] show:^{
+            [[APIManager sharedInstance] ticketsWithRequest:self->_searchRequest withCompletion:^(NSArray *tickets) {
+                    [[ProgressView sharedInstance] dismiss:^{
+                        if (tickets.count > 0) {
+                            TicketsTableViewController *ticketsViewController = [[TicketsTableViewController alloc] initWithTickets:tickets];
+                            [self.navigationController showViewController:ticketsViewController sender:self];
+                        } else {
+                            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!"
+                                                                                                     message:@"По данному направлению билетов не найдено" preferredStyle: UIAlertControllerStyleAlert];
+                            [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
+                                                                                style:(UIAlertActionStyleDefault) handler:nil]];
+                            [self presentViewController:alertController animated:YES completion:nil];
+                        }
+                    }];
+                }];
+        }];
     } else {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!"
-        message:@"По данному направлению билетов не найдено" preferredStyle: UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть"
-        style:(UIAlertActionStyleDefault) handler:nil]];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка"
+                                                                                 message:@"Необходимо указать место отправления и место прибытия"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault)
+                                                          handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
-        }
-    }];
+    }
 }
 
 //- (void)mapPriceDidTap: (UIButton *) sender {
@@ -170,9 +196,5 @@
 - (void) dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-
-
-
 
 @end

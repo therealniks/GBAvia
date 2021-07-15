@@ -23,12 +23,12 @@
 }
 
 NSDate *dateFromString(NSString *dateString) {
-    if (!dateString) { return nil; }
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    NSString *correctSrtingDate = [dateString stringByReplacingOccurrencesOfString:@"T" withString:@" "];
-    correctSrtingDate = [correctSrtingDate stringByReplacingOccurrencesOfString:@"Z" withString:@" "];
-    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    return [dateFormatter dateFromString: correctSrtingDate];
+    if (!dateString) { return  nil; }
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat: @"yyyy-MM-dd'T'HH:mm:ssZ"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"Europe/Moscow"]];
+    NSDate *date = [dateFormat dateFromString:dateString];
+    return date;
 }
 
 

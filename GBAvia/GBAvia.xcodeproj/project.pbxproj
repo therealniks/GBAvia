@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8006B7ED269A0588001B7657 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8006B7EC269A0588001B7657 /* ProgressView.m */; };
 		8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */; };
 		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
 		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
@@ -26,6 +27,9 @@
 		80D3C54D268CD62B0063490C /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D3C54A268CD62B0063490C /* countries.json */; };
 		80D3C54E268CD62B0063490C /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D3C54B268CD62B0063490C /* airports.json */; };
 		80D3C552268CD9730063490C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D3C551268CD9730063490C /* MapViewController.m */; };
+		80F14A4D269B1EC400642EEE /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A4C269B1EC400642EEE /* ContentViewController.m */; };
+		80F14A51269B203800642EEE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A50269B203800642EEE /* FirstViewController.m */; };
+		80F14A55269B461800642EEE /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F14A54269B461800642EEE /* NotificationCenter.m */; };
 		80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111A267BE4D000DF5645 /* AppDelegate.m */; };
 		80F4111E267BE4D000DF5645 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F4111D267BE4D000DF5645 /* SceneDelegate.m */; };
 		80F41121267BE4D000DF5645 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F41120267BE4D000DF5645 /* MainViewController.m */; };
@@ -36,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8006B7EB269A0588001B7657 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		8006B7EC269A0588001B7657 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		8012CF792680ABED00A27BB6 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
 		804045F0267F51D300676C61 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
@@ -70,6 +76,12 @@
 		80D3C54B268CD62B0063490C /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		80D3C550268CD9730063490C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		80D3C551268CD9730063490C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		80F14A4B269B1EC400642EEE /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		80F14A4C269B1EC400642EEE /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		80F14A4F269B203800642EEE /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		80F14A50269B203800642EEE /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		80F14A53269B461800642EEE /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
+		80F14A54269B461800642EEE /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		80F41116267BE4D000DF5645 /* GBAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F41119267BE4D000DF5645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F4111A267BE4D000DF5645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8006B7EA269A0555001B7657 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				8006B7EB269A0588001B7657 /* ProgressView.h */,
+				8006B7EC269A0588001B7657 /* ProgressView.m */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		8012CF782680ABBB00A27BB6 /* PlaceViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +206,9 @@
 		80ADFAE7268A3A6200161F58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				80F14A4E269B1FE100642EEE /* FirstViewController */,
+				80F14A4A269B1E9400642EEE /* ContentViewController */,
+				8006B7EA269A0555001B7657 /* ProgressView */,
 				80B8949326920C2900269DB3 /* TapBarController */,
 				80D3C54F268CD8F40063490C /* MapViewController */,
 				80ADFAE8268A3A7500161F58 /* MainViewController */,
@@ -261,6 +285,33 @@
 			path = MapViewController;
 			sourceTree = "<group>";
 		};
+		80F14A4A269B1E9400642EEE /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80F14A4B269B1EC400642EEE /* ContentViewController.h */,
+				80F14A4C269B1EC400642EEE /* ContentViewController.m */,
+			);
+			path = ContentViewController;
+			sourceTree = "<group>";
+		};
+		80F14A4E269B1FE100642EEE /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80F14A4F269B203800642EEE /* FirstViewController.h */,
+				80F14A50269B203800642EEE /* FirstViewController.m */,
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
+		80F14A52269B45E400642EEE /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				80F14A53269B461800642EEE /* NotificationCenter.h */,
+				80F14A54269B461800642EEE /* NotificationCenter.m */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
 		80F4110D267BE4D000DF5645 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +352,7 @@
 		80F860802688ED27004C9A3A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				80F14A52269B45E400642EEE /* NotificationCenter */,
 				80F860812688ED3D004C9A3A /* APIManager.h */,
 				80F860822688ED3D004C9A3A /* APIManager.m */,
 				80D3C542268CBA7A0063490C /* LocationService.h */,
@@ -384,12 +436,16 @@
 				80ADFAE6268A325C00161F58 /* TicketTableViewCell.m in Sources */,
 				8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */,
 				80F41121267BE4D000DF5645 /* MainViewController.m in Sources */,
+				80F14A4D269B1EC400642EEE /* ContentViewController.m in Sources */,
 				80AF33F72697390B00C02AE8 /* FavouriteTicket+CoreDataClass.m in Sources */,
 				80F4111B267BE4D000DF5645 /* AppDelegate.m in Sources */,
 				804045FB267F522C00676C61 /* Airport.m in Sources */,
+				80F14A51269B203800642EEE /* FirstViewController.m in Sources */,
 				80F860832688ED3D004C9A3A /* APIManager.m in Sources */,
 				80AF33EF26971A6700C02AE8 /* CoreDataHelper.m in Sources */,
 				804045F8267F521500676C61 /* City.m in Sources */,
+				80F14A55269B461800642EEE /* NotificationCenter.m in Sources */,
+				8006B7ED269A0588001B7657 /* ProgressView.m in Sources */,
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
 				80D3C548268CD1530063490C /* MapPrice.m in Sources */,

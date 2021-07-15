@@ -65,8 +65,8 @@
 }
 
 - (void)ticketsWithRequest:(SearchRequest)request withCompletion:(void (^)(NSArray *tickets))completion {
-    NSString *urlString = [NSString stringWithFormat:@"%@?%@&token=%@", API_URL_CHEAP, SearchRequestQuery(request), API_TOKEN];
-    [self load:urlString withCompletion:^(id _Nullable result) {
+     NSString *urlString = [NSString stringWithFormat:@"%@?%@&token=%@", API_URL_CHEAP, [self searchRequestQuery:request], API_TOKEN];
+    [self load:urlString withCompletion:^(id  _Nullable result) {
         NSDictionary *response = result;
         if (response) {
             NSDictionary *json = [[response valueForKey:@"data"] valueForKey:request.destination];
@@ -79,19 +79,18 @@
                 [array addObject:ticket];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-            completion(array);
+                completion(array);
             });
         }
     }];
 }
 
-NSString * SearchRequestQuery(SearchRequest request) {
+- (NSString *)searchRequestQuery:(SearchRequest) request {
     NSString *result = [NSString stringWithFormat:@"origin=%@&destination=%@", request.origin, request.destination];
     if (request.departDate && request.returnDate) {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"yyyy-MM";
-        result = [NSString stringWithFormat:@"%@&depart_date=%@&return_date=%@", result,
-        [dateFormatter stringFromDate:request.departDate], [dateFormatter stringFromDate:request.returnDate]];
+        result = [NSString stringWithFormat:@"%@&depart_date=%@&return_date=%@", result, [dateFormatter stringFromDate:request.departDate], [dateFormatter stringFromDate:request.returnDate]];
     }
     return result;
 }

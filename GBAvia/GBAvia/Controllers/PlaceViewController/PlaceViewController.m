@@ -55,7 +55,7 @@
         self.title = @"From";
     }
     else {
-        self.title = @"Where";
+        self.title = @"To";
     }
 }
 
