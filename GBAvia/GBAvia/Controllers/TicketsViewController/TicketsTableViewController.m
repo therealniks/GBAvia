@@ -47,7 +47,8 @@
         forCellReuseIdentifier:TicketCellReuseIdentifier];
         _datePicker = [[UIDatePicker alloc] init];
         _datePicker.datePickerMode = UIDatePickerModeDateAndTime;
-        _datePicker.minimumDate = [NSDate date];
+        _datePicker.minimumDate = [NSDate date];        
+        [_datePicker setPreferredDatePickerStyle: UIDatePickerStyleWheels];
         _dateTextField = [[UITextField alloc] initWithFrame:self.view.bounds];
         _dateTextField.hidden = YES;
         _dateTextField.inputView = _datePicker;
