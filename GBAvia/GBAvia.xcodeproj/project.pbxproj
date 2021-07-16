@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8006B7ED269A0588001B7657 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8006B7EC269A0588001B7657 /* ProgressView.m */; };
 		8012CF7B2680ABED00A27BB6 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */; };
+		801E70D726A1939F0003C56F /* NSString+Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 801E70D626A1939F0003C56F /* NSString+Localize.m */; };
+		801E70DD26A195760003C56F /* Localizible.strings in Resources */ = {isa = PBXBuildFile; fileRef = 801E70DF26A195760003C56F /* Localizible.strings */; };
 		804045F2267F51D300676C61 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F1267F51D300676C61 /* Country.m */; };
 		804045F8267F521500676C61 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045F7267F521500676C61 /* City.m */; };
 		804045FB267F522C00676C61 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 804045FA267F522C00676C61 /* Airport.m */; };
@@ -44,6 +46,11 @@
 		8006B7EC269A0588001B7657 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		8012CF792680ABED00A27BB6 /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		801E70D526A1939F0003C56F /* NSString+Localize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Localize.h"; sourceTree = "<group>"; };
+		801E70D626A1939F0003C56F /* NSString+Localize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localize.m"; sourceTree = "<group>"; };
+		801E70D826A1942E0003C56F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		801E70DE26A195760003C56F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizible.strings; sourceTree = "<group>"; };
+		801E70E026A1957D0003C56F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizible.strings; sourceTree = "<group>"; };
 		804045F0267F51D300676C61 /* Country.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		804045F1267F51D300676C61 /* Country.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		804045F6267F521500676C61 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
@@ -124,6 +131,16 @@
 				8012CF7A2680ABED00A27BB6 /* PlaceViewController.m */,
 			);
 			path = PlaceViewController;
+			sourceTree = "<group>";
+		};
+		801E70D426A193790003C56F /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				801E70D526A1939F0003C56F /* NSString+Localize.h */,
+				801E70D626A1939F0003C56F /* NSString+Localize.m */,
+				801E70DF26A195760003C56F /* Localizible.strings */,
+			);
+			path = Localize;
 			sourceTree = "<group>";
 		};
 		803BF9B8267F812F0099301F /* JSONs */ = {
@@ -352,6 +369,7 @@
 		80F860802688ED27004C9A3A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				801E70D426A193790003C56F /* Localize */,
 				80F14A52269B45E400642EEE /* NotificationCenter */,
 				80F860812688ED3D004C9A3A /* APIManager.h */,
 				80F860822688ED3D004C9A3A /* APIManager.m */,
@@ -402,6 +420,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 80F4110D267BE4D000DF5645;
 			productRefGroup = 80F41117267BE4D000DF5645 /* Products */;
@@ -423,6 +442,7 @@
 				80D3C54D268CD62B0063490C /* countries.json in Resources */,
 				80F41126267BE4D300DF5645 /* Assets.xcassets in Resources */,
 				80D3C54E268CD62B0063490C /* airports.json in Resources */,
+				801E70DD26A195760003C56F /* Localizible.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +469,7 @@
 				80F4112C267BE4D300DF5645 /* main.m in Sources */,
 				80B904F1267F73E400ED2713 /* DataManager.m in Sources */,
 				80D3C548268CD1530063490C /* MapPrice.m in Sources */,
+				801E70D726A1939F0003C56F /* NSString+Localize.m in Sources */,
 				80677F9F268A247C00317DF3 /* Ticket.m in Sources */,
 				80D3C552268CD9730063490C /* MapViewController.m in Sources */,
 				80AF33F82697390B00C02AE8 /* FavouriteTicket+CoreDataProperties.m in Sources */,
@@ -464,10 +485,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		801E70DF26A195760003C56F /* Localizible.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				801E70DE26A195760003C56F /* ru */,
+				801E70E026A1957D0003C56F /* en */,
+			);
+			name = Localizible.strings;
+			sourceTree = "<group>";
+		};
 		80F41127267BE4D300DF5645 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				80F41128267BE4D300DF5645 /* Base */,
+				801E70D826A1942E0003C56F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -479,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -538,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
